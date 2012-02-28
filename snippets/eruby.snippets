@@ -3,9 +3,9 @@
 # Includes html.snippets
 
 # Rails *****************************
-snippet rc
+snippet %
 	<% ${1} -%>
-snippet rce
+snippet =
 	<%= ${1} %>${2}
 snippet end
 	<% end -%>${1}
@@ -49,7 +49,7 @@ snippet ffcb
 	<%= ${1:f}.check_box :${2:attribute} %>
 snippet ffe
 	<% error_messages_for :${1:model} -%>
-	
+
 	<% form_for @${2:model} do |f| -%>
 		${3}
 	<% end -%>
@@ -107,3 +107,20 @@ snippet slt
 	<%= stylesheet_link_tag ${1::all}, :cache => ${2:true} %>
 snippet sslt
 	<%= stylesheet_link_tag "${1}" %>
+snippet if
+	<% if ${1:condition} %>
+		${2}
+	<% end %>
+snippet ife
+	<% if ${1:condition} %>
+		${2}
+	<% else %>
+		${3}
+	<% end %>
+snippet elsif
+	<% elsif ${1:condition} %>
+		${2}
+snippet unless
+	<% unless ${1:condition} %>
+		${2}
+	<% end %>
